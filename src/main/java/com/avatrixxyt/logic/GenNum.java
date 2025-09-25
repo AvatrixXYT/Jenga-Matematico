@@ -14,7 +14,7 @@ public class GenNum {
 		return num;
 	}
     public int Num2(int Dif){
-    	int num = rand.nextInt(Dif);
+    	int num = rand.nextInt(2,Dif);
     	return num;
     }
     public int Pontencia(){
