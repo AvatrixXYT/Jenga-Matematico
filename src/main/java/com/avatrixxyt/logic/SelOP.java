@@ -33,5 +33,7 @@ public class SelOP {
 		return resultado;
 	}
 	
-	public RespuestaCo(int Dif)
+	public int RespuestaCo(int Dif){
+        return 0;
+    }
 }
