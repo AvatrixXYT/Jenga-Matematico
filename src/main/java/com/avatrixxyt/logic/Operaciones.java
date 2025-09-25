@@ -13,4 +13,10 @@ public class Operaciones {
     public String Div (int Num1, int Num2){
         return (Num1 + " / " + Num2);
     }
+    public String Raiz (int Num2){
+        return ("√" + Num2);
+    }
+    public String Potencia (int Num1, int Num2){
+        return (Num1 + "^" + Num2);
+    }
 }
