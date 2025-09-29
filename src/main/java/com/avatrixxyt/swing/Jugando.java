@@ -28,6 +28,7 @@ public class Jugando {
 	 */
 	public void jugando() {
 		frame.getContentPane().removeAll();
+		frame.setResizable(false);
 		frame.repaint();
 		frame.setTitle("Yenga Matematico - "+dif.DifText(Inicio.Dificultad));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

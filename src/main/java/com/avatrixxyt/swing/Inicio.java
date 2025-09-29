@@ -28,6 +28,7 @@ public class Inicio {
 	public static int Dificultad;
 	
 	static Jugando jugando = new Jugando();
+	static ReglasYAyuda reglas = new ReglasYAyuda();
 	
 	ButtonGroup group = new ButtonGroup();
 	JFrame frame = new JFrame();
@@ -37,6 +38,7 @@ public class Inicio {
 	 */
 	public static void inicio() {
 		JFrame frame = new JFrame("Yenga Matematico");
+		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(446, 316);
 		SpringLayout springLayout = new SpringLayout();
@@ -104,6 +106,15 @@ public class Inicio {
 		springLayout.putConstraint(SpringLayout.NORTH, Salir, 0, SpringLayout.NORTH, Jugar);
 		springLayout.putConstraint(SpringLayout.EAST, Salir, -44, SpringLayout.EAST, frame.getContentPane());
 		frame.getContentPane().add(Salir);
+		
+		JButton Ruls = new JButton("Reglas y ayuda");
+		springLayout.putConstraint(SpringLayout.NORTH, Ruls, 0, SpringLayout.NORTH, Jugar);
+		springLayout.putConstraint(SpringLayout.EAST, Ruls, 0, SpringLayout.EAST, lblNewLabel_1);
+		frame.getContentPane().add(Ruls);
+		
+		Ruls.addActionListener(e -> {
+			reglas.reglas();
+		});
 
 		// Acción para el botón Salir
 		Salir.addActionListener(e -> frame.dispose());
