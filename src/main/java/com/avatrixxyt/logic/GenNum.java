@@ -21,6 +21,10 @@ public class GenNum {
 		int num = rand.nextInt(5);
 		return num;
 	}
+    public int Mult(){
+		int num = rand.nextInt(100);
+		return num;
+    }
     public int NumBase() {
     	int num = rand.nextInt(50);
 		return num;

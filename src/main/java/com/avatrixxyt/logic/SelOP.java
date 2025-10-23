@@ -3,13 +3,14 @@ package com.avatrixxyt.logic;
 public class SelOP {
     public int RespuestaCO;
 	public String Seleccion(int Dif) {
-		int num1, num2, pot;
+		int num1, num2, pot, mult;
 		GenNum gn = new GenNum();
 		Operaciones op = new Operaciones();
 		SetDif sd = new SetDif();
 		num1 = gn.Num(sd.DifNum(Dif));
 		num2 = gn.Num2(sd.DifNum(Dif));
 		pot = gn.Pontencia();
+		mult = gn.Mult();
 		int operacion = gn.OP(sd.DifOP(Dif));
 		String resultado;
 		switch (operacion) {
@@ -24,13 +25,13 @@ public class SelOP {
                 System.out.println(RespuestaCO);
 				break;
 			case 2:
-				resultado = op.Multi(num1, num2);
-                RespuestaCO = num1 * num2;
+				resultado = op.Multi(num1, mult);
+                RespuestaCO = num1 * mult;
                 System.out.println(RespuestaCO);
 				break;
 			case 3:
-				resultado = op.Div(num1, num2);
-                RespuestaCO = num1 / num2;
+				resultado = op.Div(num1, mult);
+                RespuestaCO = num1 / mult;
                 System.out.println(RespuestaCO);
 				break;
 			case 4:
