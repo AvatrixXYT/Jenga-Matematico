@@ -37,48 +37,47 @@ public class Inicio {
 	 * @wbp.parser.entryPoint
 	 */
 	public static void inicio() {
-		JFrame frame = new JFrame("Yenga Matematico");
+		JFrame frame = new JFrame("Jenga Matematico");
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(446, 316);
-		SpringLayout springLayout = new SpringLayout();
-		frame.getContentPane().setLayout(springLayout);
+		frame.setSize(612, 273);
+		frame.setLocationRelativeTo(null);
+		frame.setAlwaysOnTop(true);
+		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Yenga Matematico");
-		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel, 16, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel, 30, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel, 430, SpringLayout.WEST, frame.getContentPane());
-		lblNewLabel.setFont(new Font("Kailasa", Font.PLAIN, 20));
+		JLabel lblNewLabel = new JLabel("Jenga Matematico");
+		lblNewLabel.setBounds(10, 10, 592, 31);
+		lblNewLabel.setFont(new Font("Kailasa", Font.PLAIN, 23));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Selecciona Dificultad");
-		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel_1, 6, SpringLayout.SOUTH, lblNewLabel);
-		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_1, 149, SpringLayout.WEST, frame.getContentPane());
+		lblNewLabel_1.setBounds(10, 51, 592, 20);
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JRadioButton Facil = new JRadioButton("Facil");
-		springLayout.putConstraint(SpringLayout.NORTH, Facil, 19, SpringLayout.SOUTH, lblNewLabel_1);
-		springLayout.putConstraint(SpringLayout.WEST, Facil, 171, SpringLayout.WEST, frame.getContentPane());
+		Facil.setBounds(270, 86, 68, 25);
+		Facil.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		buttonGroup.add(Facil);
 		Facil.setSelected(true);
 		frame.getContentPane().add(Facil);
 		
 		JRadioButton Medio = new JRadioButton("Medio");
-		springLayout.putConstraint(SpringLayout.NORTH, Medio, 3, SpringLayout.SOUTH, Facil);
-		springLayout.putConstraint(SpringLayout.WEST, Medio, 171, SpringLayout.WEST, frame.getContentPane());
+		Medio.setBounds(267, 114, 80, 25);
+		Medio.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		buttonGroup.add(Medio);
 		frame.getContentPane().add(Medio);
 		
 		JRadioButton Dificil = new JRadioButton("Dificil");
-		springLayout.putConstraint(SpringLayout.NORTH, Dificil, 5, SpringLayout.SOUTH, Medio);
-		springLayout.putConstraint(SpringLayout.WEST, Dificil, 171, SpringLayout.WEST, frame.getContentPane());
+		Dificil.setBounds(269, 144, 78, 25);
+		Dificil.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		buttonGroup.add(Dificil);
 		frame.getContentPane().add(Dificil);
 		
 		JButton Jugar = new JButton("Jugar");
-		springLayout.putConstraint(SpringLayout.WEST, Jugar, 0, SpringLayout.WEST, lblNewLabel);
-		springLayout.putConstraint(SpringLayout.SOUTH, Jugar, -69, SpringLayout.SOUTH, frame.getContentPane());
+		Jugar.setBounds(10, 176, 149, 61);
 		frame.getContentPane().add(Jugar);
 
 		// Acción para el botón Jugar
@@ -103,13 +102,11 @@ public class Inicio {
 		});
 
 		JButton Salir = new JButton("Salir");
-		springLayout.putConstraint(SpringLayout.NORTH, Salir, 0, SpringLayout.NORTH, Jugar);
-		springLayout.putConstraint(SpringLayout.EAST, Salir, -44, SpringLayout.EAST, frame.getContentPane());
+		Salir.setBounds(465, 176, 137, 61);
 		frame.getContentPane().add(Salir);
 		
 		JButton Ruls = new JButton("Reglas y ayuda");
-		springLayout.putConstraint(SpringLayout.NORTH, Ruls, 0, SpringLayout.NORTH, Jugar);
-		springLayout.putConstraint(SpringLayout.EAST, Ruls, 0, SpringLayout.EAST, lblNewLabel_1);
+		Ruls.setBounds(165, 175, 294, 62);
 		frame.getContentPane().add(Ruls);
 		
 		Ruls.addActionListener(e -> {

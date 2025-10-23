@@ -30,36 +30,32 @@ public class Jugando {
 		frame.getContentPane().removeAll();
 		frame.setResizable(false);
 		frame.repaint();
-		frame.setTitle("Yenga Matematico - "+dif.DifText(Inicio.Dificultad));
+		frame.setTitle("Jenga Matematico - "+dif.DifText(Inicio.Dificultad));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(584, 242);
-		SpringLayout springLayout = new SpringLayout();
-		frame.getContentPane().setLayout(springLayout);
+		frame.setSize(722, 324);
+		frame.setLocationRelativeTo(null);
+		frame.setAlwaysOnTop(true);
+		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel(ops.Seleccion(Inicio.Dificultad));
-		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel, 0, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel, 584, SpringLayout.WEST, frame.getContentPane());
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 40));
+		lblNewLabel.setBounds(10, 116, 712, 48);
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 43));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Contesta la operacion");
-		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel, 29, SpringLayout.SOUTH, lblNewLabel_1);
-		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel_1, 10, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_1, 203, SpringLayout.WEST, frame.getContentPane());
+		lblNewLabel_1.setBounds(91, 10, 621, 25);
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		txtRespuesta = new JTextField();
-		springLayout.putConstraint(SpringLayout.WEST, txtRespuesta, 10, SpringLayout.WEST, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.SOUTH, txtRespuesta, -12, SpringLayout.SOUTH, frame.getContentPane());
+		txtRespuesta.setBounds(10, 258, 604, 26);
 		frame.getContentPane().add(txtRespuesta);
 		txtRespuesta.setColumns(10);
 		
 		JButton Aceptar = new JButton("Aceptar");
-		springLayout.putConstraint(SpringLayout.SOUTH, Aceptar, -9, SpringLayout.SOUTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.EAST, txtRespuesta, -6, SpringLayout.WEST, Aceptar);
-		springLayout.putConstraint(SpringLayout.EAST, Aceptar, -10, SpringLayout.EAST, frame.getContentPane());
+		Aceptar.setBounds(620, 258, 92, 29);
 
 		// Agregar ActionListener para capturar el texto al presionar el botón
 		Aceptar.addActionListener(e -> {
@@ -77,8 +73,7 @@ public class Jugando {
 		frame.getContentPane().add(Aceptar);
 		
 		JButton Salir = new JButton("Salir");
-		springLayout.putConstraint(SpringLayout.NORTH, Salir, 0, SpringLayout.NORTH, lblNewLabel_1);
-		springLayout.putConstraint(SpringLayout.WEST, Salir, 0, SpringLayout.WEST, txtRespuesta);
+		Salir.setBounds(10, 10, 75, 29);
 		frame.getContentPane().add(Salir);
 		
 		Salir.addActionListener(e -> {frame.dispose();Inicio.inicio();});
