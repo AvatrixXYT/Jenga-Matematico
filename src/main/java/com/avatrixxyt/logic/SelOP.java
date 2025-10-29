@@ -1,7 +1,7 @@
 package com.avatrixxyt.logic;
 
 public class SelOP {
-    public int RespuestaCO;
+    public static int RespuestaCO;
 	public String Seleccion(int Dif) {
 		int num1, num2, pot, mult;
 		GenNum gn = new GenNum();
