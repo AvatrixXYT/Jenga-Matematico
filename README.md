@@ -15,7 +15,7 @@ Proyecto Java con Maven llamado `Jenga Matematico`. Contiene la lógica de la ap
 - cualquier sistema operativo
 
 ## Desarrollado por:
-- Villalobos Arellano Andres "AvatrixXYT"
+- Villalobos Arellano "AvatrixXYT" Andres
 - Flores Lopez Valeria
 - Gonzales Ortiz Juan Pablo
 - Garibay Avalos Melinda Denisse
